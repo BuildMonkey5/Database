@@ -57,6 +57,9 @@
         .recipes, .shopping-list {
             list-style-type: none;
         }
+        .meal-plan {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -74,36 +77,43 @@
 <div id="Calendar" class="tabcontent">
     <div class="calendar">
         <!-- Generate 30 days -->
-        <div class="day" onclick="completeDay(this)">Day 1</div>
-        <div class="day" onclick="completeDay(this)">Day 2</div>
-        <div class="day" onclick="completeDay(this)">Day 3</div>
-        <div class="day" onclick="completeDay(this)">Day 4</div>
-        <div class="day" onclick="completeDay(this)">Day 5</div>
-        <div class="day" onclick="completeDay(this)">Day 6</div>
-        <div class="day" onclick="completeDay(this)">Day 7</div>
-        <div class="day" onclick="completeDay(this)">Day 8</div>
-        <div class="day" onclick="completeDay(this)">Day 9</div>
-        <div class="day" onclick="completeDay(this)">Day 10</div>
-        <div class="day" onclick="completeDay(this)">Day 11</div>
-        <div class="day" onclick="completeDay(this)">Day 12</div>
-        <div class="day" onclick="completeDay(this)">Day 13</div>
-        <div class="day" onclick="completeDay(this)">Day 14</div>
-        <div class="day" onclick="completeDay(this)">Day 15</div>
-        <div class="day" onclick="completeDay(this)">Day 16</div>
-        <div class="day" onclick="completeDay(this)">Day 17</div>
-        <div class="day" onclick="completeDay(this)">Day 18</div>
-        <div class="day" onclick="completeDay(this)">Day 19</div>
-        <div class="day" onclick="completeDay(this)">Day 20</div>
-        <div class="day" onclick="completeDay(this)">Day 21</div>
-        <div class="day" onclick="completeDay(this)">Day 22</div>
-        <div class="day" onclick="completeDay(this)">Day 23</div>
-        <div class="day" onclick="completeDay(this)">Day 24</div>
-        <div class="day" onclick="completeDay(this)">Day 25</div>
-        <div class="day" onclick="completeDay(this)">Day 26</div>
-        <div class="day" onclick="completeDay(this)">Day 27</div>
-        <div class="day" onclick="completeDay(this)">Day 28</div>
-        <div class="day" onclick="completeDay(this)">Day 29</div>
-        <div class="day" onclick="completeDay(this)">Day 30</div>
+        <div class="day" onclick="showMeals(1)">Day 1</div>
+        <div class="day" onclick="showMeals(2)">Day 2</div>
+        <div class="day" onclick="showMeals(3)">Day 3</div>
+        <div class="day" onclick="showMeals(4)">Day 4</div>
+        <div class="day" onclick="showMeals(5)">Day 5</div>
+        <div class="day" onclick="showMeals(6)">Day 6</div>
+        <div class="day" onclick="showMeals(7)">Day 7</div>
+        <div class="day" onclick="showMeals(8)">Day 8</div>
+        <div class="day" onclick="showMeals(9)">Day 9</div>
+        <div class="day" onclick="showMeals(10)">Day 10</div>
+        <div class="day" onclick="showMeals(11)">Day 11</div>
+        <div class="day" onclick="showMeals(12)">Day 12</div>
+        <div class="day" onclick="showMeals(13)">Day 13</div>
+        <div class="day" onclick="showMeals(14)">Day 14</div>
+        <div class="day" onclick="showMeals(15)">Day 15</div>
+        <div class="day" onclick="showMeals(16)">Day 16</div>
+        <div class="day" onclick="showMeals(17)">Day 17</div>
+        <div class="day" onclick="showMeals(18)">Day 18</div>
+        <div class="day" onclick="showMeals(19)">Day 19</div>
+        <div class="day" onclick="showMeals(20)">Day 20</div>
+        <div class="day" onclick="showMeals(21)">Day 21</div>
+        <div class="day" onclick="showMeals(22)">Day 22</div>
+        <div class="day" onclick="showMeals(23)">Day 23</div>
+        <div class="day" onclick="showMeals(24)">Day 24</div>
+        <div class="day" onclick="showMeals(25)">Day 25</div>
+        <div class="day" onclick="showMeals(26)">Day 26</div>
+        <div class="day" onclick="showMeals(27)">Day 27</div>
+        <div class="day" onclick="showMeals(28)">Day 28</div>
+        <div class="day" onclick="showMeals(29)">Day 29</div>
+        <div class="day" onclick="showMeals(30)">Day 30</div>
+    </div>
+
+    <div id="mealPlan" class="meal-plan">
+        <h2>Meal Plan for the Day</h2>
+        <p><strong>Breakfast:</strong> <span id="breakfast"></span></p>
+        <p><strong>Lunch:</strong> <span id="lunch"></span></p>
+        <p><strong>Dinner:</strong> <span id="dinner"></span></p>
     </div>
 </div>
 
@@ -111,34 +121,105 @@
 <div id="Recipes" class="tabcontent">
     <h2>Recipes</h2>
     <ul class="recipes">
-        <li><strong>Quinoa Salad with Chicken</strong>: Quinoa, chicken, broccoli, olive oil, lemon.</li>
-        <li><strong>Stir-Fried Tofu with Vegetables</strong>: Tofu, zucchini, carrots, soy sauce.</li>
-        <li><strong>Grilled Salmon with Roasted Sweet Potatoes</strong>: Salmon, sweet potatoes, olive oil, rosemary.</li>
+        <li><strong>1. Quinoa Salad with Chicken</strong></li>
+        <ul>
+            <li><strong>Ingredients:</strong></li>
+            <ul>
+                <li>1 cup cooked quinoa</li>
+                <li>1 grilled chicken breast (sliced)</li>
+                <li>1 cup steamed broccoli</li>
+                <li>2 tbsp olive oil</li>
+                <li>1 tsp lemon juice</li>
+                <li>Salt and pepper to taste</li>
+            </ul>
+            <li><strong>Instructions:</strong></li>
+            <ul>
+                <li>Combine quinoa, broccoli, and chicken in a bowl.</li>
+                <li>Drizzle with olive oil and lemon juice. Season with salt and pepper.</li>
+            </ul>
+        </ul>
+        <li><strong>2. Stir-Fried Tofu with Vegetables</strong></li>
+        <ul>
+            <li><strong>Ingredients:</strong></li>
+            <ul>
+                <li>1 block firm tofu (cubed)</li>
+                <li>1 zucchini (sliced)</li>
+                <li>2 carrots (sliced)</li>
+                <li>1 tbsp olive oil</li>
+                <li>1 tbsp soy sauce (low sodium)</li>
+                <li>1 tsp sesame seeds</li>
+            </ul>
+            <li><strong>Instructions:</strong></li>
+            <ul>
+                <li>Sauté tofu in olive oil until browned.</li>
+                <li>Add vegetables and cook until tender.</li>
+                <li>Drizzle with soy sauce and sprinkle sesame seeds.</li>
+            </ul>
+        </ul>
+        <li><strong>3. Grilled Salmon with Roasted Sweet Potatoes</strong></li>
+        <ul>
+            <li><strong>Ingredients:</strong></li>
+            <ul>
+                <li>2 salmon fillets</li>
+                <li>2 medium sweet potatoes (cubed)</li>
+                <li>1 tbsp olive oil</li>
+                <li>Salt, pepper, and rosemary to taste</li>
+            </ul>
+            <li><strong>Instructions:</strong></li>
+            <ul>
+                <li>Preheat oven to 400°F. Toss sweet potatoes in olive oil and rosemary. Roast for 30 minutes.</li>
+                <li>Grill salmon for 5-6 minutes on each side. Season with salt and pepper.</li>
+            </ul>
+        </ul>
+        <li><strong>4. Baked Chicken with Sautéed Broccoli</strong></li>
+        <ul>
+            <li><strong>Ingredients:</strong></li>
+            <ul>
+                <li>2 chicken breasts</li>
+                <li>2 cups broccoli (sautéed)</li>
+                <li>1 tbsp olive oil</li>
+                <li>Salt and pepper to taste</li>
+            </ul>
+            <li><strong>Instructions:</strong></li>
+            <ul>
+                <li>Preheat oven to 375°F. Season chicken with salt and pepper.</li>
+                <li>Bake for 25-30 minutes, or until fully cooked.</li>
+                <li>Sauté broccoli in olive oil for 5-6 minutes and serve.</li>
+            </ul>
+        </ul>
+        <li><strong>5. Avocado Toast with Grapefruit</strong></li>
+        <ul>
+            <li><strong>Ingredients:</strong></li>
+            <ul>
+                <li>1 slice whole grain bread (toasted)</li>
+                <li>1/2 avocado (mashed)</li>
+                <li>1 grapefruit (on the side)</li>
+            </ul>
+            <li><strong>Instructions:</strong></li>
+            <ul>
+                <li>Spread avocado on toasted bread.</li>
+                <li>Serve with a side of grapefruit.</li>
+            </ul>
+        </ul>
     </ul>
 </div>
 
 <!-- Shopping List Tab -->
 <div id="ShoppingList" class="tabcontent">
-    <h2>Shopping List</h2>
+    <h2>Weekly Shopping List</h2>
     <ul class="shopping-list">
-        <li>Broccoli (3 heads)</li>
-        <li>Spinach (5 bags)</li>
-        <li>Sweet potatoes (6 medium)</li>
-        <li>Zucchini (6 medium)</li>
-        <li>Chicken breasts (4 lbs)</li>
-        <li>Salmon fillets (4)</li>
-        <li>Tofu (2 blocks)</li>
-        <li>Eggs (2 dozen)</li>
-        <li>Olive oil (1 bottle)</li>
-        <li>Quinoa (2 lbs)</li>
-        <!-- Add more shopping items as needed -->
+        <li><strong>Produce:</strong> Broccoli, Spinach, Sweet Potatoes, Zucchini, Carrots, Asparagus, Apples, Oranges, Berries, Grapes, Grapefruit</li>
+        <li><strong>Proteins:</strong> Chicken breasts, Ground turkey, Salmon fillets, Tofu, Eggs</li>
+        <li><strong>Healthy Fats:</strong> Avocados, Olive oil, Nuts (almonds, walnuts), Seeds (chia, flax)</li>
+        <li><strong>Grains & Legumes:</strong> Quinoa, Brown rice, Black beans, Chickpeas</li>
+        <li><strong>Dairy:</strong> Greek yogurt (plain, unsweetened), Unsweetened almond or coconut milk</li>
+        <li><strong>Beverages:</strong> Green tea, Coffee (unsweetened)</li>
     </ul>
 </div>
 
 <script>
-    // Tab functionality
     function openTab(evt, tabName) {
-        var i, tabcontent, tablinks;
+        let i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "none";
@@ -151,13 +232,57 @@
         evt.currentTarget.className += " active";
     }
 
-    // Complete day functionality
-    function completeDay(element) {
-        element.classList.toggle("completed");
-    }
-
-    // Set the default tab to open
     document.getElementById("defaultOpen").click();
+
+    const mealPlans = {
+        1: {
+            breakfast: "Scrambled eggs with spinach and avocado",
+            lunch: "Quinoa salad with chicken, broccoli, and olive oil vinaigrette",
+            dinner: "Grilled salmon with roasted sweet potatoes and asparagus"
+        },
+        2: {
+            breakfast: "Plain Greek yogurt with chia seeds and mixed berries",
+            lunch: "Grilled chicken and avocado lettuce wraps",
+            dinner: "Stir-fried tofu with zucchini, carrots, and quinoa"
+        },
+        3: {
+            breakfast: "Green smoothie (spinach, avocado, unsweetened almond milk, flax seeds)",
+            lunch: "Quinoa bowl with black beans, roasted vegetables, and olive oil",
+            dinner: "Baked chicken with sautéed broccoli and brown rice"
+        },
+        4: {
+            breakfast: "Eggs with avocado and sautéed spinach",
+            lunch: "Tuna salad with quinoa",
+            dinner: "Grilled tofu, roasted sweet potatoes, and asparagus"
+        },
+        5: {
+            breakfast: "Plain Greek yogurt with nuts and berries",
+            lunch: "Chicken and vegetable stir-fry (broccoli, carrots, zucchini)",
+            dinner: "Grilled salmon with brown rice and sautéed spinach"
+        },
+        6: {
+            breakfast: "Avocado toast with a side of grapefruit",
+            lunch: "Black bean and avocado quinoa salad with olive oil",
+            dinner: "Baked chicken with roasted zucchini and quinoa"
+        },
+        7: {
+            breakfast: "Smoothie (berries, unsweetened almond milk, chia seeds)",
+            lunch: "Tofu and vegetable stir-fry with brown rice",
+            dinner: "Grilled turkey burgers (lettuce wrap) with roasted sweet potatoes"
+        },
+        8: {
+            breakfast: "Omelette with spinach and mushrooms",
+            lunch: "Grilled chicken with a mixed green salad",
+            dinner: "Stir-fried tofu with vegetables and brown rice"
+        }
+    };
+
+    function showMeals(day) {
+        const mealPlan = mealPlans[day];
+        document.getElementById("breakfast").innerText = mealPlan.breakfast;
+        document.getElementById("lunch").innerText = mealPlan.lunch;
+        document.getElementById("dinner").innerText = mealPlan.dinner;
+    }
 </script>
 
 </body>
