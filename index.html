@@ -3,30 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medicine List</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>30-Day No Sugar Food Challenge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        .tab {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .tab button {
+            background-color: #ddd;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .tab button.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: white;
+        }
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin: 0 auto;
+            max-width: 400px;
+        }
+        .day {
+            padding: 20px;
+            background-color: #fff;
+            border: 2px solid #4CAF50;
+            text-align: center;
+            cursor: pointer;
+        }
+        .day.completed {
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: line-through;
+        }
+        .recipes, .shopping-list {
+            list-style-type: none;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Medicine List</h1>
-    </header>
-    <main>
-        <table id="medicine-table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Strength</th>
-                    <th>Volume</th>
-                    <th>Form</th>
-                    <th>Quantity in Pack</th>
-                    <th>Where Used</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Rows will be added here dynamically -->
-            </tbody>
-        </table>
-    </main>
-    <script src="script.js"></script>
+
+<h1>30-Day No Sugar Food Challenge</h1>
+
+<!-- Tabs -->
+<div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Calendar')" id="defaultOpen">Calendar</button>
+    <button class="tablinks" onclick="openTab(event, 'Recipes')">Recipes</button>
+    <button class="tablinks" onclick="openTab(event, 'ShoppingList')">Shopping List</button>
+</div>
+
+<!-- Calendar Tab -->
+<div id="Calendar" class="tabcontent">
+    <div class="calendar">
+        <!-- Generate 30 days -->
+        <div class="day" onclick="completeDay(this)">Day 1</div>
+        <div class="day" onclick="completeDay(this)">Day 2</div>
+        <div class="day" onclick="completeDay(this)">Day 3</div>
+        <div class="day" onclick="completeDay(this)">Day 4</div>
+        <div class="day" onclick="completeDay(this)">Day 5</div>
+        <div class="day" onclick="completeDay(this)">Day 6</div>
+        <div class="day" onclick="completeDay(this)">Day 7</div>
+        <div class="day" onclick="completeDay(this)">Day 8</div>
+        <div class="day" onclick="completeDay(this)">Day 9</div>
+        <div class="day" onclick="completeDay(this)">Day 10</div>
+        <div class="day" onclick="completeDay(this)">Day 11</div>
+        <div class="day" onclick="completeDay(this)">Day 12</div>
+        <div class="day" onclick="completeDay(this)">Day 13</div>
+        <div class="day" onclick="completeDay(this)">Day 14</div>
+        <div class="day" onclick="completeDay(this)">Day 15</div>
+        <div class="day" onclick="completeDay(this)">Day 16</div>
+        <div class="day" onclick="completeDay(this)">Day 17</div>
+        <div class="day" onclick="completeDay(this)">Day 18</div>
+        <div class="day" onclick="completeDay(this)">Day 19</div>
+        <div class="day" onclick="completeDay(this)">Day 20</div>
+        <div class="day" onclick="completeDay(this)">Day 21</div>
+        <div class="day" onclick="completeDay(this)">Day 22</div>
+        <div class="day" onclick="completeDay(this)">Day 23</div>
+        <div class="day" onclick="completeDay(this)">Day 24</div>
+        <div class="day" onclick="completeDay(this)">Day 25</div>
+        <div class="day" onclick="completeDay(this)">Day 26</div>
+        <div class="day" onclick="completeDay(this)">Day 27</div>
+        <div class="day" onclick="completeDay(this)">Day 28</div>
+        <div class="day" onclick="completeDay(this)">Day 29</div>
+        <div class="day" onclick="completeDay(this)">Day 30</div>
+    </div>
+</div>
+
+<!-- Recipes Tab -->
+<div id="Recipes" class="tabcontent">
+    <h2>Recipes</h2>
+    <ul class="recipes">
+        <li><strong>Quinoa Salad with Chicken</strong>: Quinoa, chicken, broccoli, olive oil, lemon.</li>
+        <li><strong>Stir-Fried Tofu with Vegetables</strong>: Tofu, zucchini, carrots, soy sauce.</li>
+        <li><strong>Grilled Salmon with Roasted Sweet Potatoes</strong>: Salmon, sweet potatoes, olive oil, rosemary.</li>
+    </ul>
+</div>
+
+<!-- Shopping List Tab -->
+<div id="ShoppingList" class="tabcontent">
+    <h2>Shopping List</h2>
+    <ul class="shopping-list">
+        <li>Broccoli (3 heads)</li>
+        <li>Spinach (5 bags)</li>
+        <li>Sweet potatoes (6 medium)</li>
+        <li>Zucchini (6 medium)</li>
+        <li>Chicken breasts (4 lbs)</li>
+        <li>Salmon fillets (4)</li>
+        <li>Tofu (2 blocks)</li>
+        <li>Eggs (2 dozen)</li>
+        <li>Olive oil (1 bottle)</li>
+        <li>Quinoa (2 lbs)</li>
+        <!-- Add more shopping items as needed -->
+    </ul>
+</div>
+
+<script>
+    // Tab functionality
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Complete day functionality
+    function completeDay(element) {
+        element.classList.toggle("completed");
+    }
+
+    // Set the default tab to open
+    document.getElementById("defaultOpen").click();
+</script>
+
 </body>
 </html>
