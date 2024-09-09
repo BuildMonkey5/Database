@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>30-Day No Sugar Food Challenge</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -138,20 +139,22 @@
                 <li>Drizzle with olive oil and lemon juice. Season with salt and pepper.</li>
             </ul>
         </ul>
-        <li><strong>2. Grilled Hamburgers with Roasted Sweet Potatoes</strong></li>
+        <li><strong>2. Stir-Fried Tofu with Vegetables</strong></li>
         <ul>
             <li><strong>Ingredients:</strong></li>
             <ul>
-                <li>1 lb ground beef (for 4 burgers)</li>
+                <li>1 block firm tofu (cubed)</li>
+                <li>1 zucchini (sliced)</li>
+                <li>2 carrots (sliced)</li>
                 <li>1 tbsp olive oil</li>
-                <li>2 medium sweet potatoes (cubed)</li>
-                <li>Salt and pepper to taste</li>
-                <li>1 tsp paprika</li>
+                <li>1 tbsp soy sauce (low sodium)</li>
+                <li>1 tsp sesame seeds</li>
             </ul>
             <li><strong>Instructions:</strong></li>
             <ul>
-                <li>Preheat oven to 400°F. Toss sweet potatoes in olive oil, paprika, salt, and pepper. Roast for 30 minutes.</li>
-                <li>Form ground beef into patties, season with salt and pepper, and grill for 4-5 minutes per side.</li>
+                <li>Sauté tofu in olive oil until browned.</li>
+                <li>Add vegetables and cook until tender.</li>
+                <li>Drizzle with soy sauce and sprinkle sesame seeds.</li>
             </ul>
         </ul>
         <li><strong>3. Grilled Salmon with Roasted Sweet Potatoes</strong></li>
@@ -204,17 +207,29 @@
 
 <!-- Shopping List Tab -->
 <div id="ShoppingList" class="tabcontent">
-    <h2>Weekly Shopping List</h2>
-    <ul class="shopping-list">
-        <li><strong>Produce:</strong> Broccoli, Spinach, Sweet Potatoes, Zucchini, Carrots, Asparagus, Apples, Oranges, Berries, Grapes, Grapefruit</li>
-        <li><strong>Proteins:</strong> Chicken breasts, Ground beef, Salmon fillets, Eggs</li>
-        <li><strong>Healthy Fats:</strong> Avocados, Olive oil, Nuts (almonds, walnuts), Seeds (chia, flax)</li>
-        <li><strong>Grains & Legumes:</strong> Quinoa, Brown rice, Black beans, Chickpeas</li>
-        <li><strong>Dairy:</strong> Greek yogurt (plain, unsweetened), Unsweetened almond or coconut milk</li>
-        <li><strong>Beverages:</strong> Green tea, Coffee (unsweetened)</li>
-    </ul>
+    <div class="container">
+        <h2 class="text-center">30-Day Keto Shopping List</h2>
+        <ul class="list-group">
+            <li class="list-group-item"><strong>Produce:</strong> 10 bunches spinach, 5 heads kale, 5 heads lettuce, 15 heads broccoli, 10 heads cauliflower, 10 cups Brussels sprouts, 10 zucchinis, 10 bell peppers, 10 cucumbers, 10 bunches asparagus, 30 avocados, 2 pints raspberries or blackberries</li>
+            <li class="list-group-item"><strong>Proteins:</strong> 20 chicken breasts, 4 lbs ground beef, 4 lbs pork, 4 lbs beef steaks, 15 salmon fillets, 2 lbs shrimp, 60 eggs</li>
+            <li class="list-group-item"><strong>Healthy Fats:</strong> 2 bottles olive oil, 2 jars coconut oil, 1 bottle avocado oil, 2 lbs almonds, 2 lbs walnuts, 1 bag chia seeds, 1 bag flaxseeds, 2 lbs cheddar, 2 lbs mozzarella, 2 lbs grass-fed butter</li>
+            <li class="list-group-item"><strong>Dairy (optional):</strong> 1 large container plain Greek yogurt</li>
+            <li class="list-group-item"><strong>Beverages:</strong> 1 box green tea (30 tea bags), 1 bag coffee (16 oz unsweetened)</li>
+            <li class="list-group-item"><strong>Condiments and Extras:</strong> Salt, pepper, garlic powder, turmeric, rosemary, 1 bottle apple cider vinegar, 1 bottle balsamic vinegar (check for sugar content), 1 jar mustard (check for no added sugars)</li>
+            <li class="list-group-item"><strong>Snacks (optional):</strong> 1 bag pork rinds (16 oz), 2 jars olives (16 oz each)</li>
+        </ul>
+        <h3 class="text-center mt-4">Where to Buy</h3>
+        <ul class="list-group">
+            <li class="list-group-item"><strong>Grocery Stores:</strong> Whole Foods Market, Trader Joe’s, Safeway/Albertsons, Walmart</li>
+            <li class="list-group-item"><strong>Online Stores:</strong> Amazon, Thrive Market, ButcherBox</li>
+            <li class="list-group-item"><strong>Specialty Stores:</strong> Local Farmers’ Markets, Health Food Stores</li>
+        </ul>
+    </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
     function openTab(evt, tabName) {
         let i, tabcontent, tablinks;
@@ -236,12 +251,12 @@
         1: {
             breakfast: "Scrambled eggs with spinach and avocado",
             lunch: "Quinoa salad with chicken, broccoli, and olive oil vinaigrette",
-            dinner: "Grilled hamburgers with roasted sweet potatoes"
+            dinner: "Grilled salmon with roasted sweet potatoes and asparagus"
         },
         2: {
             breakfast: "Plain Greek yogurt with chia seeds and mixed berries",
             lunch: "Grilled chicken and avocado lettuce wraps",
-            dinner: "Grilled hamburgers with roasted vegetables"
+            dinner: "Stir-fried tofu with zucchini, carrots, and quinoa"
         },
         3: {
             breakfast: "Green smoothie (spinach, avocado, unsweetened almond milk, flax seeds)",
@@ -251,7 +266,7 @@
         4: {
             breakfast: "Eggs with avocado and sautéed spinach",
             lunch: "Tuna salad with quinoa",
-            dinner: "Grilled hamburgers with roasted sweet potatoes"
+            dinner: "Grilled tofu, roasted sweet potatoes, and asparagus"
         },
         5: {
             breakfast: "Plain Greek yogurt with nuts and berries",
@@ -265,13 +280,13 @@
         },
         7: {
             breakfast: "Smoothie (berries, unsweetened almond milk, chia seeds)",
-            lunch: "Grilled hamburgers with roasted sweet potatoes",
+            lunch: "Tofu and vegetable stir-fry with brown rice",
             dinner: "Grilled turkey burgers (lettuce wrap) with roasted sweet potatoes"
         },
         8: {
             breakfast: "Omelette with spinach and mushrooms",
             lunch: "Grilled chicken with a mixed green salad",
-            dinner: "Grilled hamburgers with vegetables and brown rice"
+            dinner: "Stir-fried tofu with vegetables and brown rice"
         }
     };
 
